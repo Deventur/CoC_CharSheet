@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+    <div class="content-section">
+       <form method="POST" enctype="multipart/form-data">
+           {% csrf_token %}
+           <div class="container">
+
+               <div style="float: left" class="container">
+                   <div> Имя:&nbsp;{{ investigator.name }}&nbsp;</div>
+                   <div> Игрок:&nbsp;{{ player.username }}&nbsp;</div>
+                   <div> Профессия:&nbsp;{{ investigator.name }}&nbsp;</div>
+                   <div style="float: left">Возраст: {{ investigator.age }}&nbsp;</div>
+                   <div>Пол: {{ investigator.sex }}&nbsp;</div>
+                   <div style="clear: left"> Место рождения: {{ investigator.age }}</div>
+               </div>
+               <div style="clear: left">Удача: {{ investigator.luck }}</div>
+
+               <div class="form-group">
+                   <button class="btn btn-outline-info" type="submit">Кнопка</button>
+               </div>
+           </div>
+      </form>
+    </div>
+    <div class="content-section">
+        <h3>Разделы</h3>
+        <ul class="list-group">
+            <li class="list-group-item list-group-item">Новые игра</li>
+            <li class="list-group-item list-group-item">Объявления</li>
+        </ul>
+    </div>
+{% endblock content %}

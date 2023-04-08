@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% load static %}
+    <h1>Test App</h1>
+    <h2 style="color: red;">Меню:</h2>
+    <ul>
+        <li><a href="/about" target="_blank">О приложении</a></li>
+        <li><a href="about/contacts">Контакты</a><strong>&nbsp;</strong></li>
+    </ul>
+
+    <p>Host: {{ data.host }}</p>
+    <p>Path: {{ data.path }}</p>
+    <p>User-agent: {{ data.user_agent }}</p>
+    <br/>
+    <p>Имя: {{ name }}</p>
+    <p>Возраст: {{ age }}</p>
+{% endblock %}
